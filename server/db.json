@@ -1,0 +1,22 @@
+{
+  "use": [
+    {
+      "id": 1,
+      "name": "zhangsan",
+      "pwd": 123456,
+      "phone": 110110
+    },
+    {
+      "name": "dedioeduh",
+      "pwd": "dakalk",
+      "id": 2
+    }
+  ],
+  "goods": [
+    {
+      "id": 1,
+      "goodsname": "xiaomi6",
+      "price": 998
+    }
+  ]
+}
