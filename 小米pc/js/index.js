@@ -3,18 +3,8 @@ function banner(){
     let bannerpoint=$$('.carousel-btn>a')
     let btnLeft=$('.btnLeft')
     let btnRight=$('.btnRight')
-    
     let index=0
         // 自动轮播
-        // let timer=setInterval(() => {
-        //         if(index>=bannerimg.length){
-        //             index=0
-        //         }
-        //         change(index,bannerimg,bannerpoint)
-        //         index++
-        //         // console.log(index)
-                
-        // }, 2000);
             let timer=setInterval(() => {
                 if(index>=bannerimg.length){
                     index=0
@@ -107,6 +97,21 @@ function complement(num){
     }
 }
 
+function view(){
+    let login=document.querySelector('.info-bar>.login-s')
+    // console.log(login.href)
+    login.innerHTML=''
+    let uname=localStorage.getItem('uname')
+    // console.log(id)
+    axios.get(`http://localhost:3000/use?name=${uname}`).then(({data})=>{
+        // console.log(data)
+        login.innerHTML=data[0].name
+        login.href='./Cart.html'
+    }).catch(data=>{
+        
+    })
+}
+view()
 
 
 

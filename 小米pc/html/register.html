@@ -7,8 +7,8 @@
     <title>小米账号-注册</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/register.min.css">
-    <link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon" />
-
+    <!-- <link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon" /> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
 
@@ -36,16 +36,12 @@
                 </div>
                 <!-- 账号登录模块 -->
                 <div class="banner-box-con">
-                    <form action="./php/register.php" method="GET">
+                    
                         <label for="username"> <input class="txt1" autocomplete="off" type="text" name="user" id="username" placeholder="邮箱/手机号码/小米ID"></label>
-
-
                         <label for="pwd">      <input class="txt1" type="password" placeholder="密码" autocomplete="off" id="pwd" name="password"></label>
-
                         <label for="pwds"> <input class="txt1" type="password" placeholder="确认密码" autocomplete="off" id="pwds" > </label>
                         <input type="submit" value="注册账号" class="txt2">
-
-                    </form>
+                    
                     <div class="login-btn-box">
                         <ul>
                             <li><a href="login.html">立即登录</a> </li>
@@ -98,6 +94,7 @@
         </div>
 
     </div>
+    <script src="../js/register.js"></script>
 </body>
 
 </html>
