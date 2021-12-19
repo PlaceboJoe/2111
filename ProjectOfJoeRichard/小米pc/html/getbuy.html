@@ -16,12 +16,13 @@
     <link rel="stylesheet" href="../css/base.css">
     <!--    引入当前页面的样式表-->
     <link rel="stylesheet" href="../css/getbuy.css">
-    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <script src="../js/holder.min.js"></script>
+    <!-- <script src="../js/holder.min.js"></script>
     <script src="../js/jquery-1.11.3.js"></script>
-    <script src="../js/jquery.cookie.js"></script>
-    <script>
+    <script src="../js/jquery.cookie.js"></script> -->
+    <!-- <script>
         $(function () {
 
             $(".box-big .w").on("click", ".buy-button", function () {
@@ -74,7 +75,7 @@
 
 
         })
-    </script>
+    </script> -->
 
 </head>
 
@@ -391,36 +392,60 @@
     <!-- 轮播图 -->
     <div class="box-big">
         <div class="w">
+            <div class="bigRight"><img src="../images/1.png" alt=""></div>
             <div id="slider-wrap">
+                
                 <ul id="slider">
+
                     <li data-color="#ffff">
-                        <i class="fa-image"><img src="../images/1.png" alt=""></i>
+                        <i class="fa-image">
+                            <!-- <span class="smallbox"></span> -->
+                           <img src="../images/1.png" alt="">
+                        </i>
                     </li>
                     <li data-color="#ffff">
-                        <i class="fa-gears"><img src="../images/2.png" alt=""></i>
+                        <i class="fa-gears">
+                            <!-- <span class="smallbox"></span> -->
+                            <img src="../images/2.png" alt="">
+                        </i>
                     </li>
                     <li data-color="#ffff">
-                        <i class="fa-sliders"><img src="../images/3.png" alt=""></i>
+                        <i class="fa-sliders">
+                            <!-- <span class="smallbox"></span> -->
+                            <img src="../images/3.png" alt="">
+                        </i>
                     </li>
                     <li data-color="#ffff">
-                        <i class="fa-code"><img src="../images/4.png" alt=""></i>
+                        <i class="fa-code">
+                            <!-- <span class="smallbox"></span> -->
+                            <img src="../images/4.png" alt="">
+                        </i>
                     </li>
                     <li data-color="ffff">
-                        <i class="fa-microphone-slash"><img src="../images/5.png" alt=""></i>
+                        <!-- <span class="smallbox"></span> -->
+                        <i class="fa-microphone-slash">
+                            <img src="../images/5.png" alt="">
+                        </i>
                     </li>
+                    
                 </ul>
 
                 <div class="btns" id="next"><i class="fa fa-arrow-right">&gt;</i></div>
                 <div class="btns" id="previous"><i class="fa fa-arrow-left">&lt;</i></div>
-
                 <div id="pagination-wrap">
                     <ul>
+                        <li><img src="../images/1.png" alt=""></li>
+                        <li><img src="../images/2.png" alt=""></li>
+                        <li><img src="../images/3.png" alt=""></li>
+                        <li><img src="../images/4.png" alt=""></li>
+                        <li><img src="../images/5.png" alt=""></li>
                     </ul>
                 </div>
-
+                <span class="smallbox"></span>
             </div>
             <!-- 轮播图的右边 -->
             <div class="getbuy-middle-right">
+                
                 <div class="getbuy-middle-box1">
                     <h3>黑鲨游戏手机 2</h3>
                     <p><i style="color: #ff6700;">「购机赠小米定制T恤:最高享24期免息,低至221元起/期</i>加149元得199元55W立式风冷无线 充120X 超远变焦1
@@ -428,30 +453,30 @@
                         锂离子电池1等效4500mAh大电量1 120W有线秒充+50W无线秒充+ 10W无线反充1
                         WiFi 61功 能NFC 1红外遥控</p>
                     <em>小米自营</em><br>
-                    <em>5599元</em>
+                    <em class="price">5599元</em>
 
                 </div>
                 <div class="getbuy-middle-box2">
                     <h4>选择颜色</h4>
-                    <span>陶瓷黑</span>
+                    <span style="color: orange;border:1px solid orange;" marked="1">陶瓷黑</span>
                     <span>透明版</span>
                     <span>亮银版</span>
 
                 </div>
                 <div class="getbuy-middle-box3">
                     <h4>选择版本</h4>
-                    <span>8G+256G</span>
+                    <span style="color: orange;border:1px solid orange;" marked="1">8G+256G</span>
                     <span>8G+128G</span>
                     <span>12G+256G</span>
 
                 </div>
 
                 <div class="buy-box1">
-                    <button class="buy-button" id="10000139">加入购物车</button>
+                    <button class="buy-button" id="10000139" onclick="addCart(this)">加入购物车</button>
                     <button class="buy-like">我喜欢</button>
                 </div>
             </div>
-
+            
         </div>
         <div class="footer">
             <div class="footer-top w">
@@ -523,7 +548,7 @@
             </div>
         </div>
     </div>
-    <script src="../js/getbuy.js"></script>
+    <script src="../js/getBuy.js"></script>
 </body>
 
 </html>

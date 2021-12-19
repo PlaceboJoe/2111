@@ -383,8 +383,9 @@ hmtl {
 
 #slider-wrap {
     width: 485px;
-    height: 538px;
-    position: relative;
+    height: 600px;
+    /* position: relative; */
+    position: absolute;
     overflow: hidden;
     float: left;
 }
@@ -451,7 +452,34 @@ hmtl {
     width: 100%;
     font-size: 90px;
 }
-
+/* mine */
+#slider-wrap>span{
+    width: 100px;
+    height: 100px;
+    background-color: #1bc1a3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0.5;
+}
+.bigRight{
+    width: 485px;
+    height: 486px;
+    /* background-color: #1bc1a3; */
+    /* opacity: 0.5; */
+    display: none;
+    position: relative;
+    top: 40px;
+    left: 550px;
+    float: left;
+    overflow: hidden;
+}
+.bigRight img{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+}
 .btns {
     position: absolute;
     width: 50px;
@@ -480,12 +508,12 @@ hmtl {
 
 #next {
     right: 5px;
-    border-radius: 7px 0 0 7px;
+    border-radius: 0 7px 7px 0;
 }
 
 #previous {
     left: 5px;
-    border-radius: 0 7px 7px 7px;
+    border-radius: 7px 0px 0px 7px;
 }
 
 #counter {
@@ -504,11 +532,11 @@ hmtl {
 }
 
 #pagination-wrap {
-    min-width: 20px;
+    min-width: 80px;
     margin-top: 500px;
     margin-left: auto;
     margin-right: auto;
-    height: 15px;
+    height: 80px;
     position: relative;
     text-align: center;
 }
@@ -520,13 +548,17 @@ hmtl {
 #pagination-wrap ul li {
     margin: 0 4px;
     display: inline-block;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
+    width: 80px;
+    height: 100px;
+    /* border-radius: 50%; */
     background: #cccc;
-    opacity: .5;
+    /* opacity: .5; */
     position: relative;
     top: 0;
+}
+#pagination-wrap ul li img{
+    width: 100%;
+    height: 100%;
 }
 
 #pagination-wrap ul li.active {
@@ -564,7 +596,9 @@ h2 {
     -ms-transition: all .3s cubic-bezier(1, .01, .32, 1);
     transition: all .3s cubic-bezier(1, .01, .32, 1);
 }
-
+#slider>li>i{
+    width: 450px;
+}
 
 /* 轮播图的右边 */
 
@@ -572,6 +606,7 @@ h2 {
     width: 611px;
     height: 600px;
     margin-left: 600px;
+    overflow: hidden;
 }
 
 .getbuy-middle-box1 {

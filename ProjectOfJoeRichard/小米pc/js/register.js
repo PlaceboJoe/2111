@@ -23,9 +23,9 @@ $('.txt2').onclick = function () {
         return;
     }
     // 用get获取和输入的账户密码一致的数据(get是拿，post是传入)
-    axios.get(`http://localhost:3000/use?name=${username}`).then(({data}) => {
+    axios.get(`http://localhost:3000/use?name=${username}`).then((data) => {
         // console.log(data[0].name)
-        // console.log(data)
+        console.log(data)
         if (data!=''&&username==data[0].name) {
             alert('账户已存在，请直接登录')
             return;
@@ -36,6 +36,7 @@ $('.txt2').onclick = function () {
                     pwd:password
             }).then(({data})=>{
                 // console.log(data)
+                localStorage.removeItem('uname')
                 localStorage.setItem('uname',data.name)
                 alert('注册成功')
                 location.href="../html/index1.html";
@@ -45,6 +46,7 @@ $('.txt2').onclick = function () {
         }
     )
 };
+
 // {
 //     params:{
 //     name: username,

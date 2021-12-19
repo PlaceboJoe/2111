@@ -99,17 +99,31 @@ function complement(num){
 
 function view(){
     let login=document.querySelector('.info-bar>.login-s')
+    let loginu=document.querySelector('.login-u')
     // console.log(login.href)
-    login.innerHTML=''
+    // login.innerHTML=''
     let uname=localStorage.getItem('uname')
     // console.log(id)
     axios.get(`http://localhost:3000/use?name=${uname}`).then(({data})=>{
         // console.log(data)
-        login.innerHTML=data[0].name
-        login.href='./Cart.html'
+        // login.innerHTML=data[0].name
+        // login.href='./Cart.html'
+        
+        // 如果localstorage里面有uname，'登录'变账户，'注册'变'退出'
+        if (data!='') {
+            login.innerHTML=data[0].name
+            login.href='./Cart.html'
+            loginu.innerHTML='退出'
+            loginu.href='#none'
+            loginu.onclick=function(){
+                localStorage.removeItem('uname')
+                location.reload()
+            }
+        }
     }).catch(data=>{
         
     })
+
 }
 view()
 

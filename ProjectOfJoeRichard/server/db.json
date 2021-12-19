@@ -65,13 +65,69 @@
       "name": "12374@qq.com",
       "pwd": "123456",
       "id": 17
+    },
+    {
+      "name": "1235@qq.com",
+      "pwd": "123456",
+      "id": 18
     }
   ],
   "goods": [
     {
       "id": 1,
       "goodsname": "xiaomi6",
-      "price": 998
+      "price": 998,
+      "color": "黑色",
+      "version": "8G+64G"
+    },
+    {
+      "id": 2,
+      "goodsname": "黑鲨游戏手机2",
+      "price": 5599,
+      "color": "黑色",
+      "version": "8G+64G"
+    }
+  ],
+  "carts": [
+    {
+      "goodsname": "黑鲨游戏手机 2",
+      "price": "5599元",
+      "color": "透明版",
+      "version": "12G256G",
+      "num": 4,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "goodsname": "iphone88",
+      "price": 999,
+      "color": "白色",
+      "version": "12G258G",
+      "num": 1
+    },
+    {
+      "goodsname": "黑鲨游戏手机 2",
+      "price": "5599元",
+      "color": "陶瓷黑",
+      "version": "8G256G",
+      "num": 3,
+      "id": 3
+    },
+    {
+      "goodsname": "黑鲨游戏手机 2",
+      "price": "5599元",
+      "color": "亮银版",
+      "version": "12G256G",
+      "num": 1,
+      "id": 4
+    },
+    {
+      "goodsname": "黑鲨游戏手机 2",
+      "price": "5599元",
+      "color": "陶瓷黑",
+      "version": "8G128G",
+      "num": 1,
+      "id": 5
     }
   ]
 }
