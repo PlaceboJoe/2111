@@ -8,13 +8,11 @@
     <title>小米商城 - Redmi Note 8、小米CC9、小米MIX 3，小米电视官方网站</title>
     <meta name="description" content="小米商城直营小米公司旗下所有产品，包括小米手机系列小米CC9、小米9、小米MIX 3，Redmi 红米系列Redmi K20 Pro、Redmi Note 8，小米电视、红米电视、笔记本、米家智能家居等，同时提供小米客户服务及售后支持。" />
     <meta name="keywords" content="小米,小米9,小米cc9,Redmi K20,Redmi Note 8,小米MIX3,小米商城" />
-    <link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon" /> -->
     <link rel="stylesheet" href="../css/base1.css" />
     <link rel="stylesheet" href="../css/cart.css" />
-    <script src="../js/require.js" defer async="true" data-main="../js/cart.js"></script>
-    <style>
-
-    </style>
+    <!-- <script src="../js/require.js" defer async="true" data-main="../js/cart.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -29,9 +27,8 @@
                 <p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
             </div>
             <div class="topbar-info" id="J_userInfo">
-                <a class="link" href="javascript:void(0);" data-agreement="true" data-login="true" data-stat-id="40879d467387e3e0" onclick="_msq.push(['trackEvent', '5df97b551662ffe7-40879d467387e3e0', '//order.mi.com/site/login', 'pcpid', '']);" data-href="//order.mi.com/site/login?redirectUrl=https://static.mi.com/cart/">登录</a>
-                <span class="sep">|</span><a class="link" href="javascript:void(0);" data-agreement="true" data-register="true" data-stat-id="b072cf7c6a856e34" onclick="_msq.push(['trackEvent', '5df97b551662ffe7-b072cf7c6a856e34', 'https://account.xiaomi.com/pass/register', 'pcpid', '']);"
-                    data-href="register.html">注册</a> </div>
+                <a class="link" href="login.html">登录</a>
+                <span class="sep">|</span><a class="link" href="#none">注册</a> </div>
         </div>
     </div>
     <!-- 购物车列表 -->
@@ -40,14 +37,14 @@
             <div class="cart-empty cart-empty-nologin hide" id="J_cartEmpty">
                 <h2>您的购物车还是空的！</h2>
                 <p class="login-desc">登录后将显示您之前加入的商品</p>
-                <a href="#" class="btn btn-primary btn-login" id="J_loginBtn" data-href="//order.mi.com/site/login?redirectUrl=https://static.mi.com/cart/" data-stat-id="2708415ff4adafd3" onclick="_msq.push(['trackEvent', '5df97b551662ffe7-2708415ff4adafd3', 'javascript:void0', 'pcpid', '']);">立即登录</a>
-                <a href="#" class="btn btn-primary btn-shoping J_goShoping" data-stat-id="498eb13e3ab3f287" onclick="_msq.push(['trackEvent', '5df97b551662ffe7-498eb13e3ab3f287', '//list.mi.com/0', 'pcpid', '']);">马上去购物</a>
+                <a href="#" class="btn btn-primary btn-login" id="J_loginBtn">立即登录</a>
+                <a href="#" class="btn btn-primary btn-shoping J_goShoping">马上去购物</a>
             </div>
             <div id="J_cartBox">
                 <div class="cart-goods-list">
                     <!-- 列表头 -->
                     <div class="list-head clearfix">
-                        <div class="col col-check"><i class="iconfont icon-checkbox icon-checkbox-selected" id="J_selectAll">√</i>全选</div>
+                        <div class="col col-check"><input type="checkbox" class="iconfont icon-checkbox icon-checkbox-selected" id="J_selectAll">√</input>全选</div>
                         <div class="col col-img">&nbsp;</div>
                         <div class="col col-name">商品名称</div>
                         <div class="col col-price">单价</div>
@@ -58,27 +55,29 @@
                     <!-- 列表 -->
                     <div class="list-body" id="J_cartListBody">
                         <div class="item-box">
-                            <div class="item-table J_cartGoods" data-info="{ commodity_id:'1192300048', gettype:'buy', itemid:'2192300031_0_buy', num:'1'} ">
+                            <div class="item-table J_cartGoods">
 
                             </div>
                         </div>
+                        <!-- <div class="item-box"></div> -->
+                        <!-- <img src="." alt=""> -->
                     </div>
                 </div>
                 <div class="cart-bar clearfix" id="J_cartBar">
                     <div class="section-left">
-                        <a href="#" class="back-shopping J_goShoping" data-stat-id="b16361b4c5491b6d" onclick="_msq.push(['trackEvent', '5df97b551662ffe7-b16361b4c5491b6d', '#', 'pcpid', '']);">继续购物</a>
-                        <span class="cart-total">共 <i id="J_cartTotalNum">4</i> 件商品，已选择 <i id="J_selTotalNum">4</i> 件</span>
+                        <a href="#" class="back-shopping J_goShoping">继续购物</a>
+                        <span class="cart-total">共 <i id="J_cartTotalNum">0</i> 件商品，已选择 <i id="J_selTotalNum">0</i> 件</span>
                         <span class="cart-coudan hide" id="J_coudanTip">
-                                            ，还需 <i id="J_postFreeBalance">0.00</i> 元即可免邮费  <a href="javascript:void(0);" id="J_showCoudan" data-stat-id="cfc8337d6cbfdef7" onclick="_msq.push(['trackEvent', '5df97b551662ffe7-cfc8337d6cbfdef7', 'javascript:void0', 'pcpid', '']);">立即凑单</a>
+                                            ，还需 <i id="J_postFreeBalance">0.00</i> 元即可免邮费  <a id="J_showCoudan">立即凑单</a>
                                         </span>
                     </div>
                     <span class="activity-money hide">
                                         活动优惠：减 <i id="J_cartActivityMoney">0</i> 元
                                     </span>
                     <span class="total-price">
-                                        合计：<em id="J_cartTotalPrice">1896.9</em>元
+                                        合计：<em id="J_cartTotalPrice"></em>元
                                     </span>
-                    <a href="javascript:void(0);" class="btn btn-a btn btn-primary" id="J_goCheckout" data-stat-id="9bd56b7232f4ef1a" onclick="_msq.push(['trackEvent', '5df97b551662ffe7-9bd56b7232f4ef1a', 'javascript:void0', 'pcpid', '']);">去结算</a>
+                    <a class="btn btn-a btn btn-primary" id="J_goCheckout">去结算</a>
 
                     <div class="no-select-tip hide" id="J_noSelectTip">
                         请勾选需要结算的商品
@@ -102,7 +101,7 @@
     </div>
     <!-- 购物车后续商品列表 -->
 
-    <tool-bar :bar-data="toolBarData"></tool-bar>
+    <tool-bar></tool-bar>
 
     <div ref="J_siteFooter">
         <div class="site-footer">
@@ -170,7 +169,9 @@
 
     </div>
 
-
+<script src="../js/cart.js">
+    
+</script>
 </body>
 
 

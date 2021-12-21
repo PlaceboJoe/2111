@@ -2116,7 +2116,7 @@ textarea.input-text {
 }
 
 .site-header .logo:before {
-    background: url(//s02.mifile.cn/assets/static/image/mi-logo.png) no-repeat 50% 50%;
+    /* background: url(//s02.mifile.cn/assets/static/image/mi-logo.png) no-repeat 50% 50%; */
     opacity: 1;
     filter: alpha(opacity=100) ;
     -webkit-transform: translate3d(0, 0, 0);
@@ -2124,7 +2124,7 @@ textarea.input-text {
 }
 
 .site-header .logo:after {
-    background: url(//s02.mifile.cn/assets/static/image/mi-home.png) no-repeat 50% 50%;
+    /* background: url(//s02.mifile.cn/assets/static/image/mi-home.png) no-repeat 50% 50%; */
     opacity: 0;
     filter: alpha(opacity=0) ;
     margin-left: -55px;

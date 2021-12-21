@@ -103,14 +103,15 @@ function view(){
     // console.log(login.href)
     // login.innerHTML=''
     let uname=localStorage.getItem('uname')
-    // console.log(id)
-    axios.get(`http://localhost:3000/use?name=${uname}`).then(({data})=>{
+    console.log(uname)
+    uname===null&&console.log('未登录')
+    if (uname!==null) {
+        console.log('11')
+        axios.get(`http://localhost:3000/use?name=${uname}`).then(({data})=>{
         // console.log(data)
         // login.innerHTML=data[0].name
         // login.href='./Cart.html'
-        
-        // 如果localstorage里面有uname，'登录'变账户，'注册'变'退出'
-        if (data!='') {
+        // 如果localstorage里面有uname，'登录'变账户，'注册'变'退出' 
             login.innerHTML=data[0].name
             login.href='./Cart.html'
             loginu.innerHTML='退出'
@@ -119,10 +120,10 @@ function view(){
                 localStorage.removeItem('uname')
                 location.reload()
             }
-        }
     }).catch(data=>{
-        
+        alert('访问失败')
     })
+    }
 
 }
 view()
